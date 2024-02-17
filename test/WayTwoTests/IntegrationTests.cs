@@ -9,8 +9,8 @@ public class IntegrationTests
     public async Task ShouldGetEchoResponse()
     {
         // arrange
-        var fixture = new WebApiTestFixture();
-        var client = fixture.CreateClient();
+        var factory = new ApiWebApplicationFactory();
+        var client = factory.CreateClient();
 
         // act
         var response = await client.GetAsync("/echo");

@@ -9,14 +9,14 @@ public class IntegrationTests
     public async Task ShouldGetEchoResponse()
     {
         // arrange
-        var fixture = new WebApiTestFixture();
-        var client = fixture.CreateClient();
+        var factory = new ApiWebApplicationFactory();
+        var client = factory.CreateClient();
 
         // act
         var response = await client.GetAsync("/echo");
         var responseBody = await response.Content.ReadAsStringAsync();
 
-        // assert
+        // assertB
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         responseBody.Should().NotBeNullOrWhiteSpace();
     }

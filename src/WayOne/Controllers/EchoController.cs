@@ -18,7 +18,7 @@ public class EchoController : ControllerBase
     }
 
     [HttpGet(Name = "GetEchoResponse")]
-    public async Task<EchoResponse> GetEchoResponseAsync(CancellationToken cancellationToken = default)
+    public async Task<EchoResponse> GetEchoResponseAsync(CancellationToken cancellationToken)
     {
         var response = await _service.GetEchoResponseAsync(cancellationToken);
         _logger.LogTrace("Response is {@response}", response);

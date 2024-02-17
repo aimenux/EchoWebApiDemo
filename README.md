@@ -12,4 +12,4 @@ In this repo, i m using two ways to build a web api that echoes back request inf
 - `WayTwo` : based on minimal api approach
 >
 
-**`Tools`** : vs22, net 6.0, web api, unit-testing, integration-testing, xunit, fluent-assertions, nsubstitute
+**`Tools`** : vs22, net 8.0, web api, unit-testing, integration-testing, xunit, fluent-assertions, nsubstitute
